@@ -252,7 +252,7 @@ namespace Assessment
 					password.RemoveAt(i);
 				}
 			}
-			for (int i = 0; i < numCase ; i++)
+			for (int i = 0; i < numCase; i++)
 			{
 				if (numCase < c.number.Length)
 				{
@@ -295,6 +295,30 @@ namespace Assessment
 
 			//show total length of password
 			plValue.Text = Convert.ToString(llCase + ulCase + scCase + numCase);
+		}
+
+
+		private void Save_Click(object sender, EventArgs e)
+		{
+			string userInput = passwordName.Text;
+			string passwordValue = pwDisplay.Text;
+
+			// Check if the user input is empty
+			if (string.IsNullOrWhiteSpace(userInput))
+			{
+				MessageBox.Show("Please enter a name for the password.");
+				return;
+			}
+
+			PasswordManager passwordManager = new PasswordManager
+			{
+				PasswordDisplay = passwordValue,
+				PasswordName = userInput
+			};
+
+			passwordManager.Show();
+			this.Hide();
+
 		}
 
 		//private void pwHolder_Paint(object sender, PaintEventArgs e)

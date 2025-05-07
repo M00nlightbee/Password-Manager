@@ -51,6 +51,9 @@
 			plValue = new Label();
 			pwDisplay = new Label();
 			pwHolder = new Panel();
+			Save = new Button();
+			passwordName = new TextBox();
+			passwordLabel = new Label();
 			topBoard.SuspendLayout();
 			((System.ComponentModel.ISupportInitialize)logo).BeginInit();
 			((System.ComponentModel.ISupportInitialize)swOne).BeginInit();
@@ -192,7 +195,7 @@
 			// 
 			plLabel.AutoSize = true;
 			plLabel.Font = new Font("Segoe UI Historic", 10.8F, FontStyle.Regular, GraphicsUnit.Point);
-			plLabel.Location = new Point(289, 413);
+			plLabel.Location = new Point(290, 400);
 			plLabel.Name = "plLabel";
 			plLabel.Size = new Size(147, 25);
 			plLabel.TabIndex = 12;
@@ -212,7 +215,7 @@
 			btnPassword.FlatStyle = FlatStyle.Popup;
 			btnPassword.Font = new Font("Segoe UI Historic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			btnPassword.ForeColor = Color.White;
-			btnPassword.Location = new Point(414, 581);
+			btnPassword.Location = new Point(359, 585);
 			btnPassword.Name = "btnPassword";
 			btnPassword.Size = new Size(197, 53);
 			btnPassword.TabIndex = 16;
@@ -249,7 +252,7 @@
 			plHolder.BackColor = Color.Black;
 			plHolder.Controls.Add(plValue);
 			plHolder.ForeColor = SystemColors.Window;
-			plHolder.Location = new Point(442, 409);
+			plHolder.Location = new Point(453, 400);
 			plHolder.Name = "plHolder";
 			plHolder.Size = new Size(67, 29);
 			plHolder.TabIndex = 23;
@@ -281,11 +284,37 @@
 			pwHolder.BackColor = Color.Black;
 			pwHolder.Controls.Add(pwDisplay);
 			pwHolder.ForeColor = Color.Coral;
-			pwHolder.Location = new Point(312, 490);
+			pwHolder.Location = new Point(250, 502);
 			pwHolder.Name = "pwHolder";
 			pwHolder.Size = new Size(405, 59);
 			pwHolder.TabIndex = 22;
 			pwHolder.Tag = "";
+			// 
+			// Save
+			// 
+			Save.Location = new Point(747, 504);
+			Save.Name = "Save";
+			Save.Size = new Size(110, 59);
+			Save.TabIndex = 24;
+			Save.Text = "Save";
+			Save.UseVisualStyleBackColor = true;
+			Save.Click += Save_Click;
+			// 
+			// passwordName
+			// 
+			passwordName.Location = new Point(383, 460);
+			passwordName.Name = "passwordName";
+			passwordName.Size = new Size(272, 27);
+			passwordName.TabIndex = 25;
+			// 
+			// passwordLabel
+			// 
+			passwordLabel.AutoSize = true;
+			passwordLabel.Location = new Point(250, 463);
+			passwordLabel.Name = "passwordLabel";
+			passwordLabel.Size = new Size(114, 20);
+			passwordLabel.TabIndex = 26;
+			passwordLabel.Text = "Password Name";
 			// 
 			// frmMain
 			// 
@@ -293,6 +322,9 @@
 			AutoScaleMode = AutoScaleMode.Font;
 			BackColor = SystemColors.ButtonHighlight;
 			ClientSize = new Size(962, 673);
+			Controls.Add(passwordLabel);
+			Controls.Add(passwordName);
+			Controls.Add(Save);
 			Controls.Add(plHolder);
 			Controls.Add(pwHolder);
 			Controls.Add(numValue);
@@ -352,5 +384,8 @@
         private Label plValue;
 		private Label pwDisplay;
 		private Panel pwHolder;
+		private Button Save;
+		private TextBox passwordName;
+		private Label passwordLabel;
 	}
 }
