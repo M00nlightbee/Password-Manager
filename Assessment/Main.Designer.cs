@@ -212,7 +212,7 @@
 			btnPassword.FlatStyle = FlatStyle.Popup;
 			btnPassword.Font = new Font("Segoe UI Historic", 10.2F, FontStyle.Bold, GraphicsUnit.Point);
 			btnPassword.ForeColor = Color.White;
-			btnPassword.Location = new Point(442, 585);
+			btnPassword.Location = new Point(414, 581);
 			btnPassword.Name = "btnPassword";
 			btnPassword.Size = new Size(197, 53);
 			btnPassword.TabIndex = 16;
@@ -281,7 +281,7 @@
 			pwHolder.BackColor = Color.Black;
 			pwHolder.Controls.Add(pwDisplay);
 			pwHolder.ForeColor = Color.Coral;
-			pwHolder.Location = new Point(349, 497);
+			pwHolder.Location = new Point(312, 490);
 			pwHolder.Name = "pwHolder";
 			pwHolder.Size = new Size(405, 59);
 			pwHolder.TabIndex = 22;
